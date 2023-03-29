@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Categories {
-    public static Map<String, String> getCategories() {
+    public Map<String, String> getCategories() {
 
         return categories;
     }

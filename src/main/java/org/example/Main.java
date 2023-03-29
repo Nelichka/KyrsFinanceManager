@@ -16,6 +16,10 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) throws ParseException {
         List<Purchase> basket = new ArrayList<>();
+        Categories categories = new Categories();
+        CountingMaxCategories countingMaxCategories = new CountingMaxCategories();
+        categories.getCategories();
+        countingMaxCategories.getMaxCategory(basket);
 
         try (ServerSocket serverSocket = new ServerSocket(8989);) {
             System.out.println("Сервер запущен...");

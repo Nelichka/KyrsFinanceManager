@@ -8,11 +8,11 @@ import java.util.Map;
 
 public class CountingMaxCategories {
 
-    public static String getMaxCategory(List<Purchase> basket) {
+    public String getMaxCategory(List<Purchase> basket) {
+
 
         Map<String, String> categories = Categories.getCategories();
         Map<String, Integer> sum = new HashMap<>();
-
 
         for (Purchase purchase : basket) {
             String category;
