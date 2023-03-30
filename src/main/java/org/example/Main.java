@@ -14,7 +14,7 @@ import java.util.List;
 
 
 public class Main {
-    public static void main(String[] args) throws ParseException {
+    public static void main(String[] args) throws ParseException, IOException {
         List<Purchase> basket = new ArrayList<>();
         Categories categories = new Categories();
         CountingMaxCategories countingMaxCategories = new CountingMaxCategories();

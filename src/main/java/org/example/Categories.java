@@ -12,17 +12,18 @@ public class Categories {
         return categories;
     }
 
-    static Map<String, String> categories;
+    Map<String, String> categories;
 
-    static {
+    {
         try {
-            categories = loadCategories();
+            categories = Categories();
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
 
-    static Map<String, String> loadCategories() throws IOException {
+
+    public Map<String, String> Categories() throws IOException {
         Map<String, String> forCategories = new HashMap<>();
         try (BufferedReader br = new BufferedReader(new FileReader("categories.tsv"))) {
 
@@ -36,5 +37,7 @@ public class Categories {
             }
         }
         return forCategories;
+
     }
 }
+
